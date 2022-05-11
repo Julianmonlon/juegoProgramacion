@@ -14,6 +14,7 @@ namespace juegoLenguajes
 
         private Point location;
 
+
         public Point Location
         {
             get

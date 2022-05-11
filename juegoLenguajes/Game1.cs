@@ -12,6 +12,7 @@ namespace juegoLenguajes
         Player hansel;
         Sprite background;
         string kbrState;
+        Witch muriel;
 
         public Game1()
         {
@@ -29,6 +30,7 @@ namespace juegoLenguajes
 
             hansel = new Player();
             background = new Sprite();
+            muriel = new Witch();
             base.Initialize();
         }
 
@@ -39,8 +41,9 @@ namespace juegoLenguajes
             // TODO: use this.Content to load your game content here
             background = new Sprite("Sprites/bg", new Point(0, 0), new Point(1200, 630));
             background.LoadContent(Content);
-
             hansel.LoadContent(Content);
+            muriel.LoadContent(Content);
+            
         }
 
         protected override void Update(GameTime gameTime)
@@ -87,6 +90,8 @@ namespace juegoLenguajes
             }
 
             hansel.Draw(_spriteBatch, Color.White);
+
+            muriel.Draw(_spriteBatch, Color.White);
 
             _spriteBatch.End();
 
